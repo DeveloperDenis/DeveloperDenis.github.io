@@ -44,7 +44,13 @@ div
   padding: 5px;
 }
 
-/* DEBUG CODE 
+/* id for the testing file */
+#content_
+{
+  
+}
+
+/* DEBUG CODE
 #wrapper
 {
     border: 1px solid red;

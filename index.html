@@ -1,18 +1,197 @@
 <html>
 
 <head>
-  <title>Denis Levesque</title>
-  <link rel="stylesheet" type="text/css" href="styles/main_style.css">
+	<title>Denis Levesque - Portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="styles/main_style.css">
 </head>
 
 <body>
-  <div id="wrapper">
-    <div id="content">
-      <h1>Under Construction</h1>
-      <p>I'm sure this will eventually be a breathtakingly beautiful webpage, but
-        right now it is under construction.</p>
-    </div>
-  </div>
+	<script>
+		var introInterval;
+		var bodyInterval;
+
+		var introText = "Hi.";
+		var bodyText = " My name is *Denis Levesque*. I'm a " +
+			"*Computer Science* undergrad at the *University " +
+			"of Manitoba*, with a specialization in *Computer " +
+			"Graphics*. When I'm not working on a programming " + 
+			"project, I like to spend time creating *art* or " +
+			"studying *Japanese*.";
+		
+		var textIndex = 0;
+		var emphasis = 0;
+		var currentSpan;
+		var introSpan;
+
+		regularInterval = 30;
+		emphasisInterval = 80;
+		pauseInterval = 150;
+		
+		window.onload = function() {
+			introInterval = window.setInterval(writeIntro, 200);
+			document.getElementById("introLinks").style.visibility = "hidden";
+
+			document.getElementById("introPanel").onclick = function() {
+				regularInterval = 0;
+				emphasisInterval = 0;
+				pauseInterval = 0;
+			}
+		}
+
+		function writeIntro()
+		{
+			var textArea = document.getElementById("introBody");
+
+			if (textIndex == 0)
+			{
+				introSpan = document.createElement("span");
+				introSpan.className = "superEmphasis";
+				textArea.appendChild(introSpan);
+			}
+
+			if (textIndex >= introText.length)
+			{
+				textIndex = 0;
+				window.clearInterval(introInterval);
+				bodyInterval = window.setTimeout(writeBody, regularInterval);
+			}
+			else
+			{
+				introSpan.innerHTML += introText.charAt(textIndex);
+				++textIndex;
+			}
+		}
+
+		function writeBody()
+		{
+			if (textIndex >= bodyText.length)
+			{
+				textIndex = 0;
+				document.getElementById("introLinks").style.visibility = "visible";
+				return;
+			}
+
+			var textArea = document.getElementById("introBody");
+
+			if (bodyText.charAt(textIndex) == '*' && emphasis)
+			{
+				emphasis = 0;
+				++textIndex;
+			}
+			else if (bodyText.charAt(textIndex) == '*' && !emphasis)
+			{
+				emphasis = 1;
+				currentSpan = document.createElement("span");
+				currentSpan.className = "emphasis";
+				textArea.appendChild(currentSpan);
+				++textIndex;
+			}
+
+			if (bodyText.charAt(textIndex) == '.' ||
+				bodyText.charAt(textIndex) == ',')
+			{
+				window.setTimeout(writeBody, pauseInterval);
+				// I know this isn't the best thing to do, but it works
+				textArea.innerHTML += bodyText.charAt(textIndex);
+				++textIndex;
+				return;
+			}
+
+			if (emphasis)
+			{
+				bodyInterval = window.setTimeout(writeBody, emphasisInterval);
+				currentSpan.innerHTML += bodyText.charAt(textIndex);
+			}
+			else
+			{
+				bodyInterval = window.setTimeout(writeBody, regularInterval);
+				textArea.innerHTML += bodyText.charAt(textIndex);
+			}
+			++textIndex;
+		}
+	</script>
+	
+	<div id="introPanel">
+			<div id="introBody">
+
+			</div>
+			<div id="introLinks" style="visibility: hidden">
+				<a href="http://www.linkedin.com/in/denis-levesque-95582813b" target="_blank"><img src="images/linkedin_icon.png" class="profileButton" /></a>
+				<a href="https://github.com/DeveloperDenis" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+				<a href="https://twitter.com/DeveloperDenis" target="_blank"><img src="images/twitter_icon.png" class="profileButton" /></a>
+			</div>
+		</div>
+
+	<div class="title">
+		<h1>Projects</h1>
+	</div>
+
+	<div class="grid">
+		<div class="grid-cell">
+			<div class="projectTitle">Real-Time Geometry-Based Grass</div>
+			<div class="projectDescription">
+				The final project for my fourth year Computer Graphics course.
+				The goal was to implement a technique in a research paper (I chose <a href="https://www.cg.tuwien.ac.at/research/publications/2013/JAHRMANN-2013-IGR/" target="_blank">this one</a>).
+				It was developed for Windows in C++ using modern OpenGL to efficiently draw hundreds of thousands of individual grass blades in real-time.
+			</div>
+			<br>
+			<a href="https://github.com/DeveloperDenis/Real-Time-Grass" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+		</div>
+		<div class="grid-cell">
+			<img class="screenshot" src="images/grass1.png" />
+			<img class="screenshot" src="images/grass3.png" />
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="grid-cell">
+			<div class="projectTitle">Raytracer</div>
+			<div class="projectDescription">
+				One of the assignments for my fourth year Computer Graphics course was to build a simple raytracer.
+				It supports triangles, boxes, planes, and spheres. As well as multiple different light types.
+			</div>
+			<br>
+			<a href="https://github.com/DeveloperDenis/Raytracer" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+		</div>
+		<div class="grid-cell">
+			<img class="screenshot" src="images/raytracer1.png" />
+			<img class="screenshot" src="images/raytracer3.png" />
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="grid-cell">
+			<div class="projectTitle">Software Rasterizer</div>
+			<div class="projectDescription">
+				This was done as part of a final project for my third year Computer Graphics course.
+				It is a completely software-based rasterizer, written for Windows and Linux from scratch (no external libraries) in C++.
+			</div>
+			<br>
+			<a href="https://github.com/DeveloperDenis/SoftwareRasterizer" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+		</div>
+		<div class="grid-cell">
+			<img class="screenshot" src="images/software_rasterizer3.gif" />
+			<img class="screenshot" src="images/software_rasterizer2.gif" />
+		</div>
+	</div>
+
+	<div class="grid">
+		<div class="grid-cell">
+			<div class="projectTitle">Coin Collecting Gameboy Game</div>
+			<div class="projectDescription">
+				A simple game developed for the original Gameboy in assembly. It was a great opportunity to combine my
+				love of games with my desire to dig deep into systems to figure out how they work at a low level.
+			</div>
+			<br>
+			<a href="https://github.com/DeveloperDenis/Coin-Collecting-Gameboy-Game" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+		</div>
+		<div class="grid-cell">
+			<img class="screenshot" src="images/coin_collector2.gif" />
+			<img class="screenshot" src="images/coin_collector1.png" />
+		</div>
+	</div>
+  
 </body>
 
 </html>

@@ -1,62 +1,94 @@
-/* To make sizes intuitive and not crazy */
-html
-{
-  box-sizing: border-box;
-}
-*, *:before, *:after
-{
-  box-sizing: inherit;
-}
-
 body
 {
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-  background-color: #DCE3EF;
-  color: #08214f;
-  text-align: center;
-
-  display: inline-block;
+	background-color: rgb(34, 34, 34);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	line-height: 1.5em;
 }
 
-h1
+a, a:visited
 {
-  font-size: 48px;
+	text-decoration: none;
+	color: rgb(218, 64, 53);
+}
+a:hover, a:active
+{
+	color: rgb(80, 22, 22);
 }
 
-div
+.title
 {
-  display: inline-block;
+	padding: 2px 0px;
+	background-color: #969595;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	text-transform: uppercase;
+	min-width: 400px;
 }
 
-#wrapper
+.emphasis
 {
-  height: 90%;
-  width: 95%;
-  margin-top: 2%;
+	text-transform: uppercase;
+	color: rgb(218, 64, 53);
 }
 
-#content
+.superEmphasis
 {
-  margin-top: 10%;
-  padding: 5px;
+	font-size: 64px;
 }
 
-/* id for the testing file */
-#content_
+#introPanel
 {
-  
+	margin: 0 5%;
+	padding: 5% 15%;
+	color: rgb(255, 255, 255);
+	font-family: monospace;
+	height: 60%;
+	min-height: 20em;
+	min-width: 600px;
 }
 
-/* DEBUG CODE
-#wrapper
+#introLinks
 {
-    border: 1px solid red;
+	border-radius: 0%;
+	background-color: rgb(167, 167, 167);
+	margin-top: 10px;
+	padding: 10px;
+	padding-top: 15px;
 }
-#content
+
+.grid
 {
-    border: 1px solid black;
+	display: flex;
+	background-color: #eeeeee;
+	border-bottom: 3px solid #111111;
 }
-/**/
+
+.grid-cell
+{
+	flex: 1;
+	min-width: 400px;
+	background-color: #eeeeee;
+	padding: 5px;
+}
+
+.screenshot
+{
+	width: 48%;
+	height: auto;
+}
+
+.profileButton
+{
+	width: 32px;
+	height: auto;
+}
+
+.projectTitle
+{
+	padding: 5px;
+	border-bottom: 2px solid silver;
+	margin-bottom: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+}

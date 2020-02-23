@@ -19,7 +19,7 @@ a:hover, a:active
 .title
 {
 	padding: 2px 0px;
-	background-color: #969595;
+	background-color: rgb(97, 97, 97);
 	color: rgb(255, 255, 255);
 	text-align: center;
 	text-transform: uppercase;
@@ -50,10 +50,12 @@ a:hover, a:active
 
 #introLinks
 {
-	border-radius: 0%;
-	background-color: rgb(167, 167, 167);
-	margin-top: 10px;
-	padding: 10px;
+	border-radius: 10%;
+	width: 20%;
+	text-align: center;
+	background-color: rgb(97, 97, 97);
+	margin: 15px auto;
+	padding: 5px;
 	padding-top: 15px;
 }
 

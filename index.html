@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="styles/main_style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+	<script type="text/javascript" src="scripts/slideshow_script.js"></script>
 </head>
 
 <body>
@@ -33,70 +34,176 @@
 		<h1>Projects</h1>
 	</div>
 
-	<div class="grid">
-		<div class="grid-cell">
+	<!-- TODO: I could probably make this less repetitive through some JavaScript magic, though I don't know if I want to... -->
+
+	<!-- ******** Project Panel ******** -->
+	<div class="grid" id="project1">
+		<div class="grid-cell text-cell">
 			<div class="projectTitle">Real-Time Geometry-Based Grass</div>
+			<div class="projectDate">2018</div>
 			<div class="projectDescription">
 				The final project for my fourth year Computer Graphics course.
 				The goal was to implement a technique in a research paper (I chose <a href="https://www.cg.tuwien.ac.at/research/publications/2013/JAHRMANN-2013-IGR/" target="_blank">this one</a>).
 				It was developed for Windows in C++ using modern OpenGL to efficiently draw hundreds of thousands of individual grass blades in real-time.
 			</div>
-			<br>
-			<a href="https://github.com/DeveloperDenis/Real-Time-Grass" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub">
+				<a href="https://github.com/DeveloperDenis/Real-Time-Grass" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			</div>
+			<div class="projectSkills">
+				<strong>Tags:</strong> C++, OpenGL, GLSL, 3D
+			</div>
 		</div>
-		<div class="grid-cell">
-			<img class="screenshot" src="images/grass1.png" />
-			<img class="screenshot" src="images/grass3.png" />
+		<div class="grid-cell image-cell">
+			<div class="slideshow-container">
+				<div class="slide">
+					<img src="images/grass1.png" />
+				</div>
+				<div class="slide">
+					<img src="images/grass3.png" />
+				</div>
+				<div class="slide">
+					<img src="images/grass2.png" />
+				</div>
+				<div class="slide">
+					<img src="images/grass4.gif" />
+				</div>
+
+				<a class="prev" onclick="nextSlide(0, -1)">&#10094;</a>
+				<a class="next" onclick="nextSlide(0, 1)">&#10095;</a>
+			</div>
+
+			<div style="text-align:center">
+				<span class="dot" onclick="changeSlide(0, 1)"></span>
+				<span class="dot" onclick="changeSlide(0, 2)"></span>
+				<span class="dot" onclick="changeSlide(0, 3)"></span>
+				<span class="dot" onclick="changeSlide(0, 4)"></span>
+			</div>
 		</div>
 	</div>
+	<!-- ******** Project Panel End ******** -->
 
-	<div class="grid">
-		<div class="grid-cell">
+	<!-- ******** Project Panel ******** -->
+	<div class="grid" id="project2">
+		<div class="grid-cell text-cell">
 			<div class="projectTitle">Raytracer</div>
+			<div class="projectDate">2018</div>
 			<div class="projectDescription">
 				One of the assignments for my fourth year Computer Graphics course was to build a simple raytracer.
 				It supports triangles, boxes, planes, and spheres. As well as multiple different light types.
 			</div>
-			<br>
-			<a href="https://github.com/DeveloperDenis/Raytracer" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub">
+				<a href="https://github.com/DeveloperDenis/Raytracer" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			</div>
+			<div class="projectSkills">
+				<strong>Tags:</strong> C++, Win32, Linux, Ray-Tracing, 3D, Multi-Threading
+			</div>
 		</div>
-		<div class="grid-cell">
-			<img class="screenshot" src="images/raytracer1.png" />
-			<img class="screenshot" src="images/raytracer3.png" />
+		<div class="grid-cell image-cell">
+			<div class="slideshow-container">
+				<div class="slide">
+					<img src="images/raytracer1.png" />
+				</div>
+				<div class="slide">
+					<img src="images/raytracer2.png" />
+				</div>
+				<div class="slide">
+					<img src="images/raytracer3.png" />
+				</div>
+				<div class="slide">
+					<img src="images/raytracer4.png" />
+				</div>
+
+				<a class="prev" onclick="nextSlide(1, -1)">&#10094;</a>
+				<a class="next" onclick="nextSlide(1, 1)">&#10095;</a>
+			</div>
+
+			<div style="text-align:center">
+				<span class="dot" onclick="changeSlide(1, 1)"></span>
+				<span class="dot" onclick="changeSlide(1, 2)"></span>
+				<span class="dot" onclick="changeSlide(1, 3)"></span>
+				<span class="dot" onclick="changeSlide(1, 4)"></span>
+			</div>
 		</div>
 	</div>
+	<!-- ******** Project Panel End ******** -->
 
-	<div class="grid">
-		<div class="grid-cell">
+	<!-- ******** Project Panel ******** -->
+	<div class="grid" id="project3">
+		<div class="grid-cell text-cell">
 			<div class="projectTitle">Software Rasterizer</div>
+			<div class="projectDate">2017</div>
 			<div class="projectDescription">
 				This was done as part of a final project for my third year Computer Graphics course.
 				It is a completely software-based rasterizer, written for Windows and Linux from scratch (no external libraries) in C++.
 			</div>
-			<br>
-			<a href="https://github.com/DeveloperDenis/SoftwareRasterizer" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub">
+				<a href="https://github.com/DeveloperDenis/SoftwareRasterizer" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			</div>
+			<div class="projectSkills">
+				<strong>Tags:</strong> C++, Win32, Linux, 3D
+			</div>
 		</div>
-		<div class="grid-cell">
-			<img class="screenshot" src="images/software_rasterizer3.gif" />
-			<img class="screenshot" src="images/software_rasterizer2.gif" />
+		<div class="grid-cell image-cell">
+			<div class="slideshow-container">
+				<div class="slide">
+					<img src="images/software_rasterizer3.gif" />
+				</div>
+				<div class="slide">
+					<img src="images/software_rasterizer2.gif" />
+				</div>
+				<div class="slide">
+					<img src="images/software_rasterizer1.gif" />
+				</div>
+
+				<a class="prev" onclick="nextSlide(2, -1)">&#10094;</a>
+				<a class="next" onclick="nextSlide(2, 1)">&#10095;</a>
+			</div>
+
+			<div style="text-align:center">
+				<span class="dot" onclick="changeSlide(2, 1)"></span>
+				<span class="dot" onclick="changeSlide(2, 2)"></span>
+				<span class="dot" onclick="changeSlide(2, 3)"></span>
+			</div>
 		</div>
 	</div>
+	<!-- ******** Project Panel End ******** -->
 
-	<div class="grid">
-		<div class="grid-cell">
+	<!-- ******** Project Panel ******** -->
+	<div class="grid" id="project4">
+		<div class="grid-cell text-cell">
 			<div class="projectTitle">Coin Collecting Gameboy Game</div>
+			<div class="projectDate">2017</div>
 			<div class="projectDescription">
 				A simple game developed for the original Gameboy in assembly. It was a great opportunity to combine my
 				love of games with my desire to dig deep into systems to figure out how they work at a low level.
 			</div>
-			<br>
-			<a href="https://github.com/DeveloperDenis/Coin-Collecting-Gameboy-Game" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub">
+				<a href="https://github.com/DeveloperDenis/Coin-Collecting-Gameboy-Game" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			</div>
+			<div class="projectSkills">
+				<strong>Tags:</strong> Gameboy, RGBDS Assembly, Game, 2D, Pixel Art
+			</div>
 		</div>
-		<div class="grid-cell">
-			<img class="screenshot" src="images/coin_collector2.gif" />
-			<img class="screenshot" src="images/coin_collector1.png" />
+		<div class="grid-cell image-cell">
+			<div class="slideshow-container">
+				<div class="slide">
+					<img src="images/coin_collector2.gif" />
+				</div>
+				<div class="slide">
+					<img src="images/coin_collector1.png" />
+				</div>
+
+				<a class="prev" onclick="nextSlide(3, -1)">&#10094;</a>
+				<a class="next" onclick="nextSlide(3, 1)">&#10095;</a>
+			</div>
+
+			<div style="text-align:center">
+				<span class="dot" onclick="changeSlide(3, 1)"></span>
+				<span class="dot" onclick="changeSlide(3, 2)"></span>
+			</div>
 		</div>
 	</div>
+	<!-- ******** Project Panel End ******** -->
   
 </body>
 

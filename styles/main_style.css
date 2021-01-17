@@ -1,30 +1,24 @@
 body
 {
-	background-color: rgb(34, 34, 34);
+	background-color: rgb(80, 80, 80);
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	line-height: 1.5em;
 }
 
-a, a:visited
-{
-	text-decoration: none;
-	color: rgb(218, 64, 53);
-}
-a:hover, a:active
-{
-	color: rgb(80, 22, 22);
-}
-
 .title
 {
 	font-family: 'Montserrat', sans-serif;
-	padding: 2px 0px;
-	background-color: rgb(97, 97, 97);
-	color: rgb(255, 255, 255);
+	background-color: #eeeeee;
+	color: black;
 	text-align: center;
 	text-transform: uppercase;
-	min-width: 400px;
+	min-width: 900px;
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px;
+	border: 2px solid #000000;
+	border-radius: 25px;
 }
 
 .emphasis
@@ -65,39 +59,165 @@ a:hover, a:active
 	padding-top: 15px;
 }
 
-.grid
-{
-	display: flex;
-	background-color: #eeeeee;
-	border-bottom: 3px solid #111111;
-}
-
-.grid-cell
-{
-	flex: 1;
-	min-width: 400px;
-	background-color: #eeeeee;
-	padding: 5px;
-}
-
-.screenshot
-{
-	width: 48%;
-	height: auto;
-}
-
 .profileButton
 {
 	width: 32px;
 	height: auto;
 }
 
+/**********************************************************
+/** PROJECT STYLES
+***********************************************************/
+
+.grid
+{
+	display: flex;
+	background-color: #eeeeee;
+	border: 3px solid #111111;
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px;
+	min-width: 900px;
+	border-radius: 25px;
+}
+
+.grid-cell
+{
+	background-color: #eeeeee;
+	padding: 10px;
+	position: relative;
+}
+.text-cell{
+	flex: 2;
+}
+.image-cell{
+	flex: 1;
+}
+
 .projectTitle
 {
 	font-family: 'Montserrat', sans-serif;
 	padding: 5px;
-	border-bottom: 2px solid silver;
+	border-bottom: 2px solid #aaaaaa;
 	margin-bottom: 10px;
 	font-weight: bold;
+	font-size: 25px;
 	text-transform: uppercase;
+	text-align: center;
+}
+
+.projectDate
+{
+	text-align: center;
+	color: #666666;
+	background-color: silver;
+	font-size: 18px;
+}
+
+.projectDescription
+{
+	padding: 10px;
+}
+.projectDescription a, .projectDescription a:visited
+{
+	text-decoration: none;
+	color: rgb(218, 64, 53);
+}
+.projectDescription a:hover, .projectDescription a:active
+{
+	color: rgb(80, 22, 22);
+}
+
+.projectGithub
+{
+	padding: 10px;
+	font-weight: bold;
+	font-size: 22px;
+	text-align: center;
+}
+.projectGithub a
+{
+	text-decoration: none;
+	color: black;
+}
+.projectGithub img
+{
+	width: 24px;
+	height: auto;
+}
+
+.projectSkills
+{
+	padding: 10px;
+	font-style: italic;
+	position:absolute;
+	bottom: 10px;
+}
+
+
+/**********************************************************
+/** SLIDESHOW STYLES
+***********************************************************/
+
+.slideshow-container
+{
+	height: auto;
+	position: relative;
+	margin: auto;
+	background-color: #333333;
+}
+
+.slide
+{
+	display: none;
+	text-align:center;
+	padding: 5px;
+}
+.slide img
+{
+	width: 100%;
+	height: auto;
+}
+
+.prev, .next
+{
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.next
+{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover
+{
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot
+{
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.3s ease;
+}
+
+.active, .dot:hover {
+  background-color: #000;
 }

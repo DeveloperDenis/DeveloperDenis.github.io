@@ -1,7 +1,9 @@
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
 
 <head>
 	<title>Denis Levesque - Portfolio</title>
+	<meta property="og:image" content="images/website_preview.png" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="styles/main_style.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -11,8 +13,12 @@
 
 <body>
 	<div id="introPanel">
+			<div id="introCover">
+				<img src="images/splash_screen.png" />
+			</div>
 			<div id="introBody">
-				<h1>Hi, I'm DENIS LEVESQUE</h1>
+				<h1>Hi.</h1>
+				<h2>I'm DENIS LEVESQUE</h2>
 				<p>
 					I graduated from the <span class="emphasis">University of Manitoba</span> with a degree in 
 					<span class="emphasis">Computer Science</span>, specializing in <span class="emphasis">Computer Graphics</span>.
@@ -23,11 +29,18 @@
 					<span class="emphasis">Ray Tracing</span> to <span class="emphasis">Gameboy Assembly Programming</span>, I enjoy working on 
 					projects with a heavy visual component.
 				</p>
+
+				<div id="introLinks">
+					<a href="http://www.linkedin.com/in/denis-levesque-95582813b" target="_blank"><img src="images/linkedin_icon.png" class="profileButton" /></a>
+					<a href="https://github.com/DeveloperDenis" target="_blank"><img src="images/github_icon_light.png" class="profileButton" /></a>
+				</div>
 			</div>
+			<!--
 			<div id="introLinks">
 				<a href="http://www.linkedin.com/in/denis-levesque-95582813b" target="_blank"><img src="images/linkedin_icon.png" class="profileButton" /></a>
 				<a href="https://github.com/DeveloperDenis" target="_blank"><img src="images/github_icon.png" class="profileButton" /></a>
 			</div>
+			-->
 	</div>
 
 	<div class="title">
@@ -226,6 +239,9 @@
 		<div class="grid-cell image-cell">
 			<div class="slideshow-container">
 				<div class="slide">
+					<img src="images/editor5.gif" />
+				</div>
+				<div class="slide">
 					<img src="images/editor1.png" />
 				</div>
 				<div class="slide">
@@ -236,9 +252,6 @@
 				</div>
 				<div class="slide">
 					<img src="images/editor4.gif" />
-				</div>
-				<div class="slide">
-					<img src="images/editor5.gif" />
 				</div>
 
 				<a class="prev" onclick="nextSlide(4, -1)">&#10094;</a>

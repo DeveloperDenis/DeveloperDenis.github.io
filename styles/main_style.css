@@ -24,6 +24,12 @@ body
 	min-width: 850px;
 }
 
+@media only screen and (orientation:portrait) {
+	#introPanel{
+		height:auto;
+	}
+}
+
 #introCover
 {
 	width: 100%;
@@ -111,11 +117,17 @@ body
 	border-radius: 25px;
 }
 
+@media only screen and (orientation:portrait) {
+	.grid-cell{
+		min-height:500px;
+	}
+}
+
 .grid-cell
 {
 	background-color: #eeeeee;
 	padding: 10px;
-	position: relative;
+	position: relative; 
 }
 .text-cell{
 	flex: 2;
@@ -161,6 +173,7 @@ body
 .projectGithub
 {
 	padding: 10px;
+	margin-bottom: 30px;
 	font-weight: bold;
 	font-size: 22px;
 	text-align: center;

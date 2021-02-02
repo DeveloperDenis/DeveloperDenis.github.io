@@ -1,5 +1,5 @@
-var projectIDs = ["project1", "project2", "project3", "project4", "project5", "project6"];
-var slideIndices = [1, 1, 1, 1, 1, 1]
+var projectIDs = ["project1", "project2", "project3", "project4", "project5", "project6", "project7"];
+var slideIndices = [1, 1, 1, 1, 1, 1, 1]
 
 window.onload = function()
 {

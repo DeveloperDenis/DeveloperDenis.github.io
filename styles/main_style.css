@@ -125,6 +125,7 @@ body
 
 .grid-cell
 {
+	min-height: 350px;
 	background-color: #eeeeee;
 	padding: 10px;
 	position: relative; 

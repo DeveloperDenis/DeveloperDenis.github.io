@@ -41,6 +41,7 @@
 				<div id="introLinks">
 					<a href="http://www.linkedin.com/in/denis-levesque-95582813b" target="_blank"><img src="images/linkedin_icon.png" class="profileButton" /></a>
 					<a href="https://github.com/DeveloperDenis" target="_blank"><img src="images/github_icon_light.png" class="profileButton" /></a>
+					<a href="https://developerdenis.itch.io/" target="_blank"><img src="images/itchio_icon_white.png" class="profileButton" /></a>
 				</div>
 			</div>
 	</div>
@@ -54,18 +55,18 @@
 	<!-- ******** Project Panel ******** -->
 	<div class="grid" id="project1">
 		<div class="grid-cell text-cell">
-			<div class="projectTitle">Golem - In Progress</div>
+			<div class="projectTitle">Golem</div>
 			<div class="projectDate">2021</div>
 			<div class="projectDescription">
 				My first foray into developing real-time 3D applications with Unity. It's a simple game where you control a little golem, rolling around collecting
 				"magical artifacts" until you gain the power to break through a barrier blocking the goal. I created some of
 				the 3D models myself in Blender (like the golem), while using others from the Unity Asset Store.
 			</div>
-			<!--
-			<div class="projectGithub">
-				<a href="https://github.com/DeveloperDenis/Real-Time-Grass" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			
+			<div class="projectItchio projectLink">
+				<a href="https://developerdenis.itch.io/golem" target="_blank"><img src="images/itchio_badge.png" /></a>
 			</div>
-			-->
+			
 			<div class="projectSkills">
 				<strong>Tags:</strong> Unity, 3D, C#, Game, 3D Modelling, Blender
 			</div>
@@ -75,15 +76,21 @@
 				<div class="slide">
 					<img src="images/golem1.png" />
 				</div>
+				<div class="slide">
+					<img src="images/golem2.png" />
+				</div>
+				<div class="slide">
+					<img src="images/golem3.png" />
+				</div>
 
-				<!--
 				<a class="prev" onclick="nextSlide(0, -1)">&#10094;</a>
 				<a class="next" onclick="nextSlide(0, 1)">&#10095;</a>
-				-->
 			</div>
 
 			<div style="text-align:center">
 				<span class="dot" onclick="changeSlide(0, 1)"></span>
+				<span class="dot" onclick="changeSlide(0, 2)"></span>
+				<span class="dot" onclick="changeSlide(0, 3)"></span>
 			</div>
 		</div>
 	</div>
@@ -99,8 +106,8 @@
 				The goal was to implement a technique in a research paper (I chose <a href="https://www.cg.tuwien.ac.at/research/publications/2013/JAHRMANN-2013-IGR/" target="_blank">this one</a>).
 				It was developed for Windows in C++ using modern OpenGL to efficiently draw hundreds of thousands of individual grass blades in real-time.
 			</div>
-			<div class="projectGithub">
-				<a href="https://github.com/DeveloperDenis/Real-Time-Grass" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub projectLink">
+				<a href="https://github.com/DeveloperDenis/Real-Time-Grass" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
 			</div>
 			<div class="projectSkills">
 				<strong>Tags:</strong> C++, OpenGL, GLSL, 3D
@@ -115,9 +122,6 @@
 					<img src="images/grass3.png" />
 				</div>
 				<div class="slide">
-					<img src="images/grass2.png" />
-				</div>
-				<div class="slide">
 					<img src="images/grass4.gif" />
 				</div>
 
@@ -129,7 +133,6 @@
 				<span class="dot" onclick="changeSlide(1, 1)"></span>
 				<span class="dot" onclick="changeSlide(1, 2)"></span>
 				<span class="dot" onclick="changeSlide(1, 3)"></span>
-				<span class="dot" onclick="changeSlide(1, 4)"></span>
 			</div>
 		</div>
 	</div>
@@ -144,8 +147,8 @@
 				One of the assignments for my fourth year Computer Graphics course was to build a simple raytracer.
 				It supports triangles, boxes, planes, and spheres. As well as multiple different light types.
 			</div>
-			<div class="projectGithub">
-				<a href="https://github.com/DeveloperDenis/Raytracer" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub projectLink">
+				<a href="https://github.com/DeveloperDenis/Raytracer" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
 			</div>
 			<div class="projectSkills">
 				<strong>Tags:</strong> C++, Win32, Linux, Ray-Tracing, 3D, Multi-Threading
@@ -155,9 +158,6 @@
 			<div class="slideshow-container">
 				<div class="slide">
 					<img src="images/raytracer1.png" />
-				</div>
-				<div class="slide">
-					<img src="images/raytracer2.png" />
 				</div>
 				<div class="slide">
 					<img src="images/raytracer3.png" />
@@ -174,7 +174,6 @@
 				<span class="dot" onclick="changeSlide(2, 1)"></span>
 				<span class="dot" onclick="changeSlide(2, 2)"></span>
 				<span class="dot" onclick="changeSlide(2, 3)"></span>
-				<span class="dot" onclick="changeSlide(2, 4)"></span>
 			</div>
 		</div>
 	</div>
@@ -189,8 +188,8 @@
 				This was done as part of a final project for my third year Computer Graphics course.
 				It is a completely software-based rasterizer, written for Windows and Linux from scratch (no external libraries) in C++.
 			</div>
-			<div class="projectGithub">
-				<a href="https://github.com/DeveloperDenis/SoftwareRasterizer" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub projectLink">
+				<a href="https://github.com/DeveloperDenis/SoftwareRasterizer" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
 			</div>
 			<div class="projectSkills">
 				<strong>Tags:</strong> C++, Win32, Linux, 3D
@@ -230,8 +229,8 @@
 				A simple game developed for the original Gameboy in assembly. It was a great opportunity to combine my
 				love of games with my desire to dig deep into systems to figure out how they work at a low level.
 			</div>
-			<div class="projectGithub">
-				<a href="https://github.com/DeveloperDenis/Coin-Collecting-Gameboy-Game" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub projectLink">
+				<a href="https://github.com/DeveloperDenis/Coin-Collecting-Gameboy-Game" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
 			</div>
 			<div class="projectSkills">
 				<strong>Tags:</strong> Gameboy, RGBDS Assembly, Game, 2D, Pixel Art
@@ -269,8 +268,8 @@
 				by clicking their icon or pressing keyboard shortcuts. Supports having multiple tile maps and tile sets open simultaneously and allows you to switch
 				between them at any time.
 			</div>
-			<div class="projectGithub">
-				<a href="https://github.com/DeveloperDenis/Tile-Map-Editor" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub projectLink">
+				<a href="https://github.com/DeveloperDenis/Tile-Map-Editor" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
 			</div>
 			<div class="projectSkills">
 				<strong>Tags:</strong> C++, SDL2, App, UI
@@ -317,8 +316,8 @@
 			<div class="projectDescription">
 				A "tasteful recreation" of the game Flappy Bird created in Python 2.7 using Pygame.
 			</div>
-			<div class="projectGithub">
-				<a href="https://github.com/DeveloperDenis/BirdyFlap" target="_blank"> View on Github! <img src="images/github_icon.png" class="profileButton" /></a>
+			<div class="projectGithub projectLink">
+				<a href="https://github.com/DeveloperDenis/BirdyFlap" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
 			</div>
 			<div class="projectSkills">
 				<strong>Tags:</strong> Python, 2D, Game, Pixel Art

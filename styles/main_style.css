@@ -257,6 +257,11 @@ body
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
+.dots
+{
+	padding: 5px;
+}
+
 .dot
 {
 	cursor: pointer;

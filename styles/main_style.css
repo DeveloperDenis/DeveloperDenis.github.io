@@ -22,6 +22,7 @@ body
 	width: 100%;
 	height: 100%;
 	min-width: 850px;
+	min-height: 500px;
 }
 
 @media only screen and (orientation:portrait) {
@@ -92,17 +93,103 @@ body
 
 .title
 {
-	font-family: 'Montserrat', sans-serif;
 	background-color: #eeeeee;
 	color: black;
 	text-align: center;
-	text-transform: uppercase;
 	min-width: 900px;
 	width: 90%;
 	margin: 20px auto;
 	padding: 10px;
 	border: 2px solid #000000;
 	border-radius: 25px;
+}
+.title h1
+{
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+#filterBar
+{
+	width: 75%;
+	margin: auto;
+	padding-bottom: 10px;
+	color: #444444;
+	border-top: 1px dotted black;
+}
+
+#filterMenu
+{
+	box-sizing: border-box;
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	width: 75%;
+	padding: 5px;
+	text-align: center;
+	background-color: rgb(200, 200, 200);
+	color: #666666;
+	border-radius: 5px;
+}
+#filterMenu:hover
+{
+	background-color: rgb(160, 160, 160);
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#filterMenu-content
+{
+	box-sizing: border-box;
+	display: none;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	max-height: 350px;
+	margin: auto;
+	z-index: 1;
+	background-color: rgb(200, 200, 200);
+	overflow: auto;
+	border: 1px solid black;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#filterMenu-content p
+{
+	box-sizing: border-box;
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 5px;
+	width: 100%;
+	height: 100%;
+	border-top: 1px dashed rgb(100, 100, 100);
+}
+#filterMenu-content p:hover
+{
+	background-color: rgb(180, 180, 180);
+}
+#filterMenu:hover #filterMenu-content
+{
+	display: block;
+}
+
+#filterResult
+{
+	cursor: pointer;
+	display: none;
+	width: 75%;
+	margin: auto;
+	padding: 5px;
+	text-align: center;
+	background-color: rgb(200, 200, 200);
+	border-radius: 5px;
+}
+#filterResult .cross
+{
+	float: left;
 }
 
 .grid
@@ -153,7 +240,7 @@ body
 {
 	text-align: center;
 	color: #666666;
-	background-color: silver;
+	background-color: rgb(200, 200, 200);
 	font-size: 18px;
 }
 
@@ -200,7 +287,7 @@ body
 {
 	padding: 10px;
 	font-style: italic;
-	position:absolute;
+	position: absolute;
 	bottom: 10px;
 }
 

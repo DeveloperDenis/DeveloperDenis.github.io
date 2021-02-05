@@ -1,7 +1,9 @@
 var projectIDs = [];
 var slideIndices = [];
 
-window.onload = function()
+window.addEventListener("load", initSlideShow);
+
+function initSlideShow()
 {
 	var projects = document.getElementsByClassName("project")
 

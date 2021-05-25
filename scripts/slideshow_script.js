@@ -71,5 +71,9 @@ function showSlides(slideshowIndex, slideIndex)
 	}
 
 	slides[slideIndices[slideshowIndex]].style.display = "block";
-	dots[slideIndices[slideshowIndex]].className += " active";
+
+	if (dots.length > 0)
+	{
+		dots[slideIndices[slideshowIndex]].className += " active";
+	}
 }

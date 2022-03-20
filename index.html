@@ -1,386 +1,359 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:og="http://ogp.me/ns#"
-	  prefix="og: http://ogp.me/ns#">
+      prefix="og: http://ogp.me/ns#">
+    
+    <head>
+        <title>Denis Levesque - Portfolio</title>
 
-<head>
-	<title>Denis Levesque - Portfolio</title>
-	
-	<meta name="title" property="og:title" content="Portfolio - Denis Levesque">
-	<meta property="og:type" content="website">
-	<meta name="image" property="og:image" content="http://developerdenis.com/images/website_preview.png">
-	<meta name="description" property="og:description" content="Portfolio website showcasing the work of Denis Levesque. This ranges from simple Gameboy games written in assembly to implementations of techniques from Computer Graphics research papers.">
-	<meta property="og:url" content="//www.developerdenis.com">
-	<meta name="author" content="Denis Levesque">
+        <!-- Meta info -->
+        <meta name="title" property="og:title" content="Portfolio - Denis Levesque">
+        <meta property="og:type" content="website">
+        <meta name="image" property="og:image" content="http://developerdenis.com/images/website_preview.png">
+        <meta name="description" property="og:description" content="Portfolio website showcasing the work of Denis Levesque. This ranges from simple Gameboy games written in assembly to implementations of techniques from Computer Graphics research papers.">
+        <meta property="og:url" content="//www.developerdenis.com">
+        <meta name="author" content="Denis Levesque">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles/main_style.css">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-	<script type="text/javascript" src="scripts/slideshow_script.js"></script>
-	<script type="text/javascript" src="scripts/filter_script.js"></script>
-</head>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-<body>
-	<div id="introPanel">
-			<div id="introCover">
-				<img src="images/splash_screen.png" />
-			</div>
-			<div id="introBody">
-				<h2>I'm DENIS LÉVESQUE</h2>
-				<p>
-					I'm a <span class="emphasis">Software Developer</span> with two years of industry experience and a particular
-					interest in Computer Graphics related work and low-level programming. In my free time I also enjoy doing a bit of 
-					<span class="emphasis">game development</span>. I graduated from the <span class="emphasis">University of Manitoba</span>
-					in 2020 with a degree in <span class="emphasis">Computer Science</span>, specializing in 
-					<span class="emphasis">Human Computer Interaction and Computer Graphics</span>.
-				</p>
-				<p>
-					Below, you can find a selection of personal and school projects highlighting my various interests. From
-					<span class="emphasis">Ray Tracing</span> to <span class="emphasis">Gameboy Assembly Programming</span>, I enjoy working on 
-					projects with a heavy visual component.
-				</p>
+        <!-- Custom Styles -->
+        <link rel="stylesheet" type="text/css" href="styles/main_style.css">
+    </head>
 
-				<div id="introLinks">
-					<a href="http://www.linkedin.com/in/denis-levesque-95582813b" target="_blank"><img src="images/linkedin_icon.png" class="profileButton" /></a>
-					<a href="https://github.com/DeveloperDenis" target="_blank"><img src="images/github_icon_light.png" class="profileButton" /></a>
-					<a href="https://developerdenis.itch.io/" target="_blank"><img src="images/itchio_icon_white.png" class="profileButton" /></a>
-				</div>
-			</div>
-	</div>
+    <body>
+        <div id="cover-container"> <!-- Contains background cover image -->
+            <div id="cover-body">
+                <div id="cover-description">
+                    <h1>DENIS LÉVESQUE</h1>
+                    <h2>Software Developer/Game Developer/Artist</h2>
 
-	<div class="title">
-		<h1>Projects</h1>
+                    <!-- Write something much more short and to the point, that showcases my personality and interests-->
+                    <p>
+                        I have over 2 years of experience in the software development industry with a keen interest in Computer Graphics-related work and
+                        low-level programming.
+                    </p>
+                    <p>
+                        Outside of work, I love working on personal projects to deepen my understanding of various topics like rendering and game development.
+                        Many of my projects have a strong visual element to them as I like to combine my love of art with my passion for programming.
+                    </p>
 
-		<div id="filterBar">
-			<p>-- Filter projects by skill --</p>
-			<div id="filterMenu">
-				<div>Choose tag to filter</div>
-				<div id="filterMenu-content"></div>
-			</div>
-			<div id="filterResult" onclick="clearFilter()">
-			</div>
-		</div>
-	</div>
+                    <div id="cover-links">
+                        <a href="http://www.linkedin.com/in/denis-levesque-95582813b" target="_blank"><img src="images/linkedin_icon.png" class="profileButton" title="LinkedIn"/></a>
+                        <a href="https://github.com/DeveloperDenis" target="_blank"><img src="images/github_icon_light.png" class="profileButton" title="GitHub" /></a>
+                        <a href="https://developerdenis.itch.io/" target="_blank"><img src="images/itchio_icon_white.png" class="profileButton" title="ItchIO" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Pellets and Corners</div>
-			<div class="projectDate">2022</div>
-			<div class="projectDescription">
-				PaC for short, this was an experiment in creating my first complete and polished game in Unity. It's a recreation of
-				Pacman using <a href="https://gameinternals.com/understanding-pac-man-ghost-behavior">Chad Birch's article</a> and 
-				<a href="https://www.gamedeveloper.com/design/the-pac-man-dossier">"The Pac-Man Dossier"</a> as design documents to 
-				guide the implementation.
-			</div>
+        <div id="category-title">
+            <h2>PROJECTS</h2>
+        </div>
+        <div id="category-menu">
+            <ul>
+                <li>All</li>
+                <li>Computer Graphics</li>
+                <li>Game Development</li>
+                <li>Web Development</li>
+            </ul>
+        </div>
 
-			<div class="projectItchio projectLink">
-				<a href="https://developerdenis.itch.io/pellets-and-corners/" target="_blank"><img src="images/itchio_badge.png" /></a>
-			</div>
-			
-			<div class="projectSkills">
-				<strong>Tags:</strong> Unity, C#, Game, 2D
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/pellets_and_corners_0.png" />
-				</div>
-				<div class="slide">
-					<img src="images/pellets_and_corners_1.png" />
-				</div>
-				<div class="slide">
-					<img src="images/pellets_and_corners_2.png" />
-				</div>
-				<div class="slide">
-					<img src="images/pellets_and_corners_3.png" />
-				</div>
-			</div>
+        <div class="row">
+            <div id="filter" class="column">
+                <h1>Filter Tags</h1>
+            </div>
+    
+            <div id="projects" class="column">
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Pellets and Corners</div>
+                    <div class="project-date">2022</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/pellets_and_corners_0.png" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                PaC for short, this was an exercise in creating a more complete and polished game than my first experiment in Unity. 
+                                It's a recreation of Pacman with all art and programming handled by me. I used an 
+                                <a href="https://gameinternals.com/understanding-pac-man-ghost-behavior">article by Chad Birch</a> and
+                                <a href="https://www.gamedeveloper.com/design/the-pac-man-dossier">"The Pac-Man Dossier"</a> as game design documents
+                                to guide what kind of features were needed.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://developerdenis.itch.io/pellets-and-corners/" target="_blank"><img src="images/itchio_badge.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> Unity, C#, Game, 2D
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
+                
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Path Tracer</div>
+                    <div class="project-date">2021</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/path_tracer_0.png" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                Wanting to expand my knowledge of rendering, I began developing a path-tracer while working through Peter Shirley's
+                                <a href="https://raytracing.github.io/">Ray Tracing in One Weekend</a> book. This is the result of that development.
+                                It supports three different types of materials (diffuse, metal, and dialectric), a camera with customizable properties (fov, position, roll, aperture, etc.),
+                                and basic multi-threading to speed up rendering.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://github.com/DeveloperDenis/PathTracer" target="_blank"><img src="images/github_icon.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> 3D, C++, Win32, Path-Tracing, Ray-Tracing, Multi-Threading
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
 
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Golem</div>
+                    <div class="project-date">2021</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/golem_0.png" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                My first foray into developing real-time 3D applications with Unity. It's a simple game where you control a little golem, rolling around collecting
+                                "magical artifacts" until you gain the power to break through a barrier blocking the goal. I created some of
+                                the 3D models myself in Blender (like the golem), while using others from the Unity Asset Store.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://developerdenis.itch.io/golem" target="_blank"><img src="images/itchio_badge.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> Unity, 3D, C#, Game
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
 
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Simple Ray-Tracer</div>
-			<div class="projectDate">2021</div>
-			<div class="projectDescription">
-				Wanting to expand my knowledge of ray-tracing, I began developing a new ray-tracer while working through Peter Shirley's
-				<a href="https://raytracing.github.io/">Ray Tracing in One Weekend</a> book. This is the result of that development.
-				It supports three different types of materials (diffuse, metal, and dialectric), a camera with customizable properties (fov, position, roll, aperture, etc.),
-				and basic multi-threading to speed up rendering.
-			</div>
-			
-			<div class="projectGithub projectLink">
-				<a href="https://github.com/DeveloperDenis/SimpleRaytracer" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
-			</div>
-			
-			<div class="projectSkills">
-				<strong>Tags:</strong> 3D, C++, Win32, Ray-Tracing, Multi-Threading
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/ray-tracer-output.png" />
-				</div>
-			</div>
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Real-Time Geometry-Based Grass</div>
+                    <div class="project-date">2018</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/grass_0.png" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                The final project for my fourth year Computer Graphics course.
+                                The goal was to implement a technique in a research paper (I chose <a href="https://www.cg.tuwien.ac.at/research/publications/2013/JAHRMANN-2013-IGR/" target="_blank">this one</a>).
+                                It was developed for Windows in C++ using modern OpenGL to efficiently draw hundreds of thousands of individual grass blades in real-time.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://github.com/DeveloperDenis/RealTimeGrassRendering" target="_blank"><img src="images/github_icon.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> C++, OpenGL, GLSL, 3D
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
 
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Ray Tracer Assignment</div>
+                    <div class="project-date">2018</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/ray_tracer_0.png" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                One of the assignments for my fourth year Computer Graphics course was to build a simple raytracer.
+                                It supports triangles, boxes, planes, and spheres. As well as multiple different light types.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://github.com/DeveloperDenis/Raytracer" target="_blank"><img src="images/github_icon.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> C++, Win32, Linux, 3D, Ray-Tracing
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
 
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Golem</div>
-			<div class="projectDate">2021</div>
-			<div class="projectDescription">
-				My first foray into developing real-time 3D applications with Unity. It's a simple game where you control a little golem, rolling around collecting
-				"magical artifacts" until you gain the power to break through a barrier blocking the goal. I created some of
-				the 3D models myself in Blender (like the golem), while using others from the Unity Asset Store.
-			</div>
-			
-			<div class="projectItchio projectLink">
-				<a href="https://developerdenis.itch.io/golem" target="_blank"><img src="images/itchio_badge.png" /></a>
-			</div>
-			
-			<div class="projectSkills">
-				<strong>Tags:</strong> Unity, 3D, C#, Game
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/golem1.png" />
-				</div>
-				<div class="slide">
-					<img src="images/golem2.png" />
-				</div>
-				<div class="slide">
-					<img src="images/golem3.png" />
-				</div>
-			</div>
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Software Rasterizer</div>
+                    <div class="project-date">2017</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/software_rasterizer_0.gif" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                This was done as part of a final project for my third year Computer Graphics course.
+                                It is a completely software-based rasterizer, written for Windows and Linux from scratch (no external libraries) in C++.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://github.com/DeveloperDenis/SoftwareRasterizer" target="_blank"><img src="images/github_icon.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> C++, Win32, Linux, 3D
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
 
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Coin Collecting Gameboy Game</div>
+                    <div class="project-date">2017</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/gameboy_game_0.png" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                A simple game developed for the original Gameboy in assembly. It was a great opportunity to combine my
+                                love of games with my desire to dig deep into systems to figure out how they work at a low level.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://github.com/DeveloperDenis/CoinCollectingGameboyGame" target="_blank"><img src="images/github_icon.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> Gameboy, Assembly, Game, 2D
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
 
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Real-Time Geometry-Based Grass</div>
-			<div class="projectDate">2018</div>
-			<div class="projectDescription">
-				The final project for my fourth year Computer Graphics course.
-				The goal was to implement a technique in a research paper (I chose <a href="https://www.cg.tuwien.ac.at/research/publications/2013/JAHRMANN-2013-IGR/" target="_blank">this one</a>).
-				It was developed for Windows in C++ using modern OpenGL to efficiently draw hundreds of thousands of individual grass blades in real-time.
-			</div>
-			<div class="projectGithub projectLink">
-				<a href="https://github.com/DeveloperDenis/Real-Time-Grass" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
-			</div>
-			<div class="projectSkills">
-				<strong>Tags:</strong> C++, OpenGL, GLSL, 3D
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/grass1.png" />
-				</div>
-				<div class="slide">
-					<img src="images/grass3.png" />
-				</div>
-				<div class="slide">
-					<img src="images/grass4.gif" />
-				</div>
-			</div>
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Tile Map Editor</div>
+                    <div class="project-date">2016</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/tile_map_editor_0.gif" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                A custom editor for creating tiled maps for games. Written in C++ with the SDL2 library. I created a custom UI system as a learning exercise.
+                                It supports arbitrarily large tile maps that scroll if they don't fit the tile map window. There are three different editing tools that you can toggle
+                                by clicking their icon or pressing keyboard shortcuts. Supports having multiple tile maps and tile sets open simultaneously and allows you to switch
+                                between them at any time.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://github.com/DeveloperDenis/TileMapEditor" target="_blank"><img src="images/github_icon.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> C++, SDL2, App, UI
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
 
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
-
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Raytracer Assignment</div>
-			<div class="projectDate">2018</div>
-			<div class="projectDescription">
-				One of the assignments for my fourth year Computer Graphics course was to build a simple raytracer.
-				It supports triangles, boxes, planes, and spheres. As well as multiple different light types.
-			</div>
-			<div class="projectGithub projectLink">
-				<a href="https://github.com/DeveloperDenis/Raytracer" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
-			</div>
-			<div class="projectSkills">
-				<strong>Tags:</strong> C++, Win32, Linux, 3D, Ray-Tracing
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/raytracer1.png" />
-				</div>
-				<div class="slide">
-					<img src="images/raytracer3.png" />
-				</div>
-				<div class="slide">
-					<img src="images/raytracer4.png" />
-				</div>
-			</div>
-
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
-
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Software Rasterizer</div>
-			<div class="projectDate">2017</div>
-			<div class="projectDescription">
-				This was done as part of a final project for my third year Computer Graphics course.
-				It is a completely software-based rasterizer, written for Windows and Linux from scratch (no external libraries) in C++.
-			</div>
-			<div class="projectGithub projectLink">
-				<a href="https://github.com/DeveloperDenis/SoftwareRasterizer" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
-			</div>
-			<div class="projectSkills">
-				<strong>Tags:</strong> C++, Win32, Linux, 3D
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/software_rasterizer3.gif" />
-				</div>
-				<div class="slide">
-					<img src="images/software_rasterizer2.gif" />
-				</div>
-				<div class="slide">
-					<img src="images/software_rasterizer1.gif" />
-				</div>
-			</div>
-
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
-
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Coin Collecting Gameboy Game</div>
-			<div class="projectDate">2017</div>
-			<div class="projectDescription">
-				A simple game developed for the original Gameboy in assembly. It was a great opportunity to combine my
-				love of games with my desire to dig deep into systems to figure out how they work at a low level.
-			</div>
-			<div class="projectGithub projectLink">
-				<a href="https://github.com/DeveloperDenis/Coin-Collecting-Gameboy-Game" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
-			</div>
-			<div class="projectSkills">
-				<strong>Tags:</strong> Gameboy, Assembly, Game, 2D
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/coin_collector2.gif" />
-				</div>
-				<div class="slide">
-					<img src="images/coin_collector1.png" />
-				</div>
-			</div>
-
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
-
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Tile Map Editor</div>
-			<div class="projectDate">2016</div>
-			<div class="projectDescription">
-				A custom editor for creating tiled maps for games. Written in C++ with the SDL2 library. I created a custom UI system as a learning exercise.
-				It supports arbitrarily large tile maps that scroll if they don't fit the tile map window. There are three different editing tools that you can toggle
-				by clicking their icon or pressing keyboard shortcuts. Supports having multiple tile maps and tile sets open simultaneously and allows you to switch
-				between them at any time.
-			</div>
-			<div class="projectGithub projectLink">
-				<a href="https://github.com/DeveloperDenis/Tile-Map-Editor" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
-			</div>
-			<div class="projectSkills">
-				<strong>Tags:</strong> C++, SDL2, App, UI
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/editor5.gif" />
-				</div>
-				<div class="slide">
-					<img src="images/editor1.png" />
-				</div>
-				<div class="slide">
-					<img src="images/editor2.gif" />
-				</div>
-				<div class="slide">
-					<img src="images/editor3.png" />
-				</div>
-				<div class="slide">
-					<img src="images/editor4.gif" />
-				</div>
-			</div>
-
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
-
-	<!-- ******** Project Panel ******** -->
-	<div class="grid project">
-		<div class="grid-cell text-cell">
-			<div class="projectTitle">Birdy Flap</div>
-			<div class="projectDate">2015</div>
-			<div class="projectDescription">
-				A "tasteful recreation" of the game Flappy Bird created in Python 2.7 using Pygame.
-			</div>
-			<div class="projectGithub projectLink">
-				<a href="https://github.com/DeveloperDenis/BirdyFlap" target="_blank"><img src="images/github_icon.png" /> View on Github!</a>
-			</div>
-			<div class="projectSkills">
-				<strong>Tags:</strong> Python, 2D, Game
-			</div>
-		</div>
-		<div class="grid-cell image-cell">
-			<div class="slideshow-container">
-				<div class="slide">
-					<img src="images/birdyflap3.gif" />
-				</div>
-				<div class="slide">
-					<img src="images/birdyflap1.png" />
-				</div>
-				<div class="slide">
-					<img src="images/birdyflap2.png" />
-				</div>
-			</div>
-
-			<div class="dots" style="text-align:center"></div>
-		</div>
-	</div>
-	<!-- ******** Project Panel End ******** -->
-  
-</body>
-
+                <!-- ******** Project Panel ******** -->
+                <div class="project">
+                    <div class="project-title">Birdy Flap</div>
+                    <div class="project-date">2015</div>
+                    <div class="project-content row">
+                        <div class="project-image column">
+                            <img src="images/birdy_flap_0.png" />
+                        </div>
+    
+                        <div class="column">
+                            <div class="project-description">
+                                A "tasteful recreation" of the game Flappy Bird created in Python 2.7 using Pygame. One of my first completed
+                                game projects, and my first non-Flash game project.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="project-links">
+                        <a href="https://github.com/DeveloperDenis/BirdyFlap" target="_blank"><img src="images/github_icon.png" /></a>
+                    </div>
+    
+                    <div class="project-tags">
+                        <strong>Tags:</strong> Python, 2D, Game
+                    </div>
+    
+                    <div class="expand">
+                        Expand &#11206;
+                    </div>
+                </div>
+                <!-- ******** Project Panel End ******** -->
+            </div>
+        </div>
+    </body>
 </html>
